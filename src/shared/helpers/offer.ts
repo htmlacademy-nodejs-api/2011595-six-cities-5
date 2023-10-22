@@ -51,10 +51,8 @@ export function createOffer(offerData: string): Offer {
       avatarPath: authorAvatar,
       type: UserType[authorType as keyof typeof UserType],
     },
-    location: {
-      lat: Number.parseFloat(lat),
-      lng: Number.parseFloat(lng),
-    },
+    lat: Number.parseFloat(lat),
+    lng: Number.parseFloat(lng),
     commentsCount: Number.parseInt(commentsCount, 10),
   };
 }

@@ -12,7 +12,8 @@ export class CreateOfferDto {
   public maxAdults: number;
   public price: number;
   public commentsCount: number;
-  public location: { lat: number; lng: number };
+  public lat: number;
+  public lng: number;
   public postDate: Date;
   public city: CityNameType;
   public type: HousingType;

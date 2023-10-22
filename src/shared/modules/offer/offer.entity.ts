@@ -47,7 +47,10 @@ export class OfferEntity extends defaultClasses.TimeStamps{
   public commentsCount!: number;
 
   @prop()
-  public location!: { lat: number; lng: number };
+  public lat!: number;
+
+  @prop()
+  public lng!: number;
 
   @prop({ required: true })
   public postDate!: Date;
