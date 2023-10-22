@@ -19,6 +19,7 @@
     "mock:server": "json-server ./mocks/mock-server-data.json --port 3123"
   },
   "devDependencies": {
+    "@typegoose/typegoose": "11.6.0",
     "@types/convict": "6.1.4",
     "@types/convict-format-with-validator": "6.0.3",
     "@types/node": "18.17.17",
@@ -29,7 +30,7 @@
     "eslint-config-htmlacademy": "9.1.1",
     "json-server": "0.17.3",
     "pino-pretty": "10.2.3",
-    "prettier": "^3.0.3",
+    "prettier": "3.0.3",
     "rimraf": "5.0.1",
     "ts-node": "10.9.1",
     "tslib": "2.6.2",
@@ -47,6 +48,7 @@
     "dayjs": "1.11.10",
     "got": "13.0.0",
     "inversify": "6.0.1",
+    "mongoose": "7.6.1",
     "pino": "8.15.6",
     "reflect-metadata": "0.1.13"
   }

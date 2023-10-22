@@ -1,8 +1,8 @@
-import { Offer } from '../types/offer.type.js';
-import { CityNameType } from '../types/city-name.type.js';
-import { HousingType } from '../types/housing.type.js';
-import { Goods } from '../types/goods.type.js';
-import { UserType } from '../types/user.type.js';
+import { Offer } from '../types/index.js';
+import { CityNameType } from '../types/index.js';
+import { HousingType } from '../types/index.js';
+import { Goods } from '../types/index.js';
+import { UserType } from '../types/index.js';
 
 export function createOffer(offerData: string): Offer {
   const [
@@ -33,7 +33,7 @@ export function createOffer(offerData: string): Offer {
     title: title,
     description: description,
     postDate: new Date(postDate),
-    city: { name: CityNameType[city as keyof typeof CityNameType] },
+    city: CityNameType[city as keyof typeof CityNameType],
     previewImage: previewImage,
     images: images.split(';'),
     isPremium: isPremium === 'true',
@@ -45,9 +45,10 @@ export function createOffer(offerData: string): Offer {
     price: Number.parseInt(price, 10),
     goods: goods.split(';').map((good) => Goods[good as keyof typeof Goods]),
     host: {
-      name: authorName,
+      firstname: authorName,
+      lastname: authorName,
       email: authorEmail,
-      avatar: authorAvatar,
+      avatarPath: authorAvatar,
       type: UserType[authorType as keyof typeof UserType],
     },
     location: {
