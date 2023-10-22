@@ -2,7 +2,6 @@ import { CityNameType} from './city-name.type.js';
 import { HousingType } from './housing.type.js';
 import { Goods} from './goods.type.js';
 import { User } from './user.type.js';
-import { LocationType } from './location.type.js';
 
 export type Offer = {
   title: string;
@@ -20,6 +19,7 @@ export type Offer = {
   price: number;
   goods: Goods[];
   host: User;
-  location: LocationType;
+  lat: number;
+  lng: number;
   commentsCount:number;
 };
