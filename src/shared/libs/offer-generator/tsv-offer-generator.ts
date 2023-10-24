@@ -55,7 +55,7 @@ export class TSVRentOfferGenerator implements OfferGenerator {
     const authorType: UserType = getRandomItem(Object.values(UserType));
     const authorAvatar: string = getRandomItem(Object.values(mockData.images));
     const commentsCount: number = generateRandomValue(MIN_COMMENTS_COUNT, MAX_COMMENTS_COUNT);
-    console.log(goods)
+
     const lat: number = CITIES[city].lat;
     const lng: number = CITIES[city].lng;
     return [
